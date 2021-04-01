@@ -9,6 +9,12 @@ ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 
 class Square extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            value: null,
+        };
+    }
     render() {
       return (
         <button className="square" onClick={() => { alert('click');
@@ -16,7 +22,7 @@ class Square extends React.Component {
           {this.props.value}
         </button>
       );
-    }
+    } 
   }
   
     class Board extends React.Component {
