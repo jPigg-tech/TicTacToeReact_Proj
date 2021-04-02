@@ -8,19 +8,13 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 
-class Square extends React.Component {
-    
-    render() {
-      return (
-        <button 
-        className="square" 
-        onClick={() => this.props.onCLick()}
-        >
-          {this.props.value}
+function Square(props){
+    return(
+        <button className="square" onCLick={props.onCLick}>
+            {props.value}
         </button>
-      );
-    } 
-  }
+    );
+}
   
     class Board extends React.Component {
         constructor(props){
