@@ -77,6 +77,12 @@ function Square(props) {
             xIsNext: !this.state.xIsNext,
         });
     }
+    jumpTO(step){
+        this.setState({
+            stepNumber: step,
+            xIsNext: (step % 2) === 0,
+        });
+    }
 
     render() {
         const history = this.state.history;
