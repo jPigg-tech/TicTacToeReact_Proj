@@ -78,7 +78,8 @@ function Square(props) {
             xIsNext: !this.state.xIsNext,
         });
     }
-    jumpTO(step){
+
+    jumpTo(step){
         this.setState({
             stepNumber: step,
             xIsNext: (step % 2) === 0,
